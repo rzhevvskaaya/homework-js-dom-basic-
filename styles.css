@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+
+:root{
+    --background-color: #c8dbe0;
+    --color:#333333;
+    --filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+    --box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
+}
+body {
+    background-color: var(--background-color);
+    font-family: 'Bitter', serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+img {
+    width: 50%;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--box-shadow);
+    filter: var(--filter);
+}
+.sort-icon {
+    height: 10px;
+    width: 10px;
+    display: block;
+    box-shadow: none;
+    filter:none;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20px;
+}
+
+table {
+    font-size: 14px;
+    border-collapse: separate;
+    text-align: center;
+    border-spacing: 5px;
+    background: #ECE9E0;
+    color: #656665;
+    border: 16px solid #ECE9E0;
+    border-radius: 10px;
+    table-layout: fixed;
+    width: 100%;
+    margin: 15px;
+}
+th, td:first-child {
+    background: #AFCDE7;
+    color: white;
+    padding: 10px 20px;
+}
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+td {
+    background: #D8E6F3;
+    padding: 10px;
+}
+th:first-child, td:first-child {
+    text-align: left;
+}
+th {
+    background: #BCEBDD;
+    text-shadow: 0 1px 1px #2D2020;
+    font-size: 18px;
+    padding: 10px;
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+}
+
+tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+tr td:last-child {
+    border-right: none;
+}
+
+td:hover {
+    background-color: #AFCDE7;
+}
+label {
+    position: relative;
+}
+input[type="radio"]{
+    appearance: none;
+    background: #fff;
+    border: 2px solid #415674;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 100%;
+    vertical-align: text-bottom;
+    position: relative;
+}
+input[type="radio"]::before{
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    top: 0;
+}
+input[type="radio"]:checked::before {
+    border: 5px solid transparent;
+    border-radius: 100%;
+    background: #4b83fc;
+    margin: 4px;
+}
+input[type="radio"]:focus{
+    outline: solid 1px;
+    outline-offset: 2px;
+}
+
+label {
+    margin-top: 15px;
+}
+
+label input[type="radio"] {
+    margin-bottom: 20px;
+}
+select {
+    margin-left: 10px;
+    appearance: none;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Стили для стрелочки выпадающего списка */
+select::after {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
